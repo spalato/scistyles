@@ -51,10 +51,9 @@ if __name__ == "__main__":
         py_modules = [],
         include_package_data=True,
         zip_safe=False,
-            # list of possible classifiers:
+        # list of possible classifiers:
         #  https://pypi.python.org/pypi?%3Aaction=list_classifiers
         classifiers=[
-            "Natural Language :: English",
             "Framework :: Matplotlib",
             "Intended Audience :: Science/Research",
             "Programming Language :: Python :: 3",
