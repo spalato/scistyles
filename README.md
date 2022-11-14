@@ -23,7 +23,7 @@ plt.style.use("presentation-sp")
 Coming soon.
 
 # TODO
-todolist  
+  
 - [ ] Add contribution guideliunes
 - [ ] setup distribution
 - [ ] release
