@@ -1,0 +1,79 @@
+####################################################################################
+# 
+# Helvetica Neue Font Stylesheet
+# 
+# Last Updated: 2018-11-06
+####################################################################################
+
+### FONT
+font.size           : 10
+font.family         : Arial
+# font.sans-serif     : Helvetica Neue
+font.weight         : medium
+text.hinting        : auto
+text.hinting_factor : 10
+
+### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
+text.usetex         :  False # use latex for all text handling. The following fonts
+                              # are supported through the usual rc parameter settings:
+                              # new century schoolbook, bookman, times, palatino,
+                              # zapf chancery, charter, serif, sans-serif, helvetica,
+                              # avant garde, courier, monospace, computer modern roman,
+                              # computer modern sans serif, computer modern typewriter
+                              # If another font is desired which can loaded using the
+                              # LaTeX \usepackage command, please inquire at the
+                              # matplotlib mailing list
+
+### AXES
+axes.labelsize      : 10      # fontsize of the x any y labels
+axes.linewidth      : 1   # edge linewidth
+axes.labelpad       : 8.0
+axes.labelweight    : medium
+#axes.xmargin        : 0       # x margin.  See `axes.Axes.margins`
+#axes.ymargin        : 0 
+
+### LINES
+lines.linewidth     : 1.5
+lines.markersize  : 4            # markersize, in points
+lines.dash_joinstyle : round        # miter|round|bevel
+lines.dash_capstyle : round          # butt|round|projecting
+lines.solid_joinstyle : round       # miter|round|bevel
+lines.solid_capstyle : round        # butt|round|projecting
+
+### TICKS
+# see http://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick
+xtick.top            : True   # draw ticks on the top side
+xtick.bottom         : True   # draw ticks on the bottom side
+xtick.major.size     : 3      # major tick size in points
+xtick.major.width    : 1    # major tick width in points
+xtick.minor.size     : 3      # minor tick size in points
+xtick.major.pad      : 5      # distance to major tick label in points
+xtick.minor.pad      : 3      # distance to the minor tick label in points
+xtick.labelsize      : 10     # fontsize of the tick labels
+xtick.direction	     : in
+
+ytick.left            : True   # draw ticks on the top side
+ytick.right         : True   # draw ticks on the bottom side
+ytick.major.size     : 3   # major tick size in points
+ytick.major.width    : 1    # major tick width in points
+ytick.minor.size     : 0      # minor tick size in points
+ytick.major.pad      : 5      # distance to major tick label in points
+ytick.minor.pad      : 3      # distance to the minor tick label in points
+ytick.labelsize      : 10 # fontsize of the tick labels
+ytick.direction      : in
+
+### Legend
+legend.fontsize      : 10
+legend.frameon       : False   # whether or not to draw a frame around legend
+legend.handlelength  : 2.5      # the length of legend lines
+
+### FIGURE
+# See http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure
+# figure.figsize   : 3.4039, 2.10373    # figure size in inches
+
+#savefig.transparent :  True     # transparent figures
+#savefig.dpi         : 72.27     # figure dots per inch
+#savefig.bbox        : tight     # 'tight' or 'standard'.
+#savefig.pad_inches  : 0.05       # Padding to be used when bbox is set to 'tight'
+
+#pdf.fonttype       : 42
