@@ -58,5 +58,6 @@ if __name__ == "__main__":
             "Intended Audience :: Science/Research",
             "Programming Language :: Python :: 3",
             "Topic :: Scientific/Engineering :: Visualization",
+            "License :: OSI Approved :: MIT License",
         ]
     )
