@@ -7,7 +7,7 @@ Currently, git clone, then run
 pip install -e .
 ```
 
-Better solutions coming soon. <span style="color:LightGray">(as of 2022-11-17)</span>.
+Better solutions coming soon.
 
 # Usage
 The first purpose of this module is to supply matplotlib stylesheets to assist
@@ -61,5 +61,6 @@ documentation](https://matplotlib.org/stable/tutorials/introductory/customizing.
 - [ ] add a few further design tools (colors, palettes...)
 
 # Notes
-[^1] Boo!
-[^2] We aren't talking about colormaps.
+
+[^1]: Boo!
+[^2]: We aren't talking about colormaps.
