@@ -8,11 +8,11 @@ from matplotlib.style import use
 
 def test_files():
     # check that there is at least one style file
-    files = list(chain([glob(d+"/*.mplstyle") for d in scistyles_dir]))
+    files = list(*chain([glob(d+"/*.mplstyle") for d in scistyles_dir]))
     assert len(files) > 0
 
 def test_list_styles():
-    files = list(chain([glob(d+"/*.mplstyle") for d in scistyles_dir]))
+    files = list(*chain([glob(d+"/*.mplstyle") for d in scistyles_dir]))
     listed = list_styles()
     assert len(files) == len(listed) # for now...
 
