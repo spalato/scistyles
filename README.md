@@ -1,5 +1,5 @@
 # scistyles
-Matplotlib stylesheets.
+Matplotlib stylesheets for scientific publications.
 
 # Installation
 Currently, git clone, then run
