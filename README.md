@@ -2,12 +2,10 @@
 Matplotlib stylesheets for scientific publications.
 
 # Installation
-Currently, git clone, then run
+The package is available on pypi. Simply run:
 ```
-pip install -e .
+pip install scistyles
 ```
-
-Better solutions coming soon.
 
 # Usage
 The first purpose of this module is to supply matplotlib stylesheets to assist
