@@ -2,7 +2,7 @@ import os.path as pth
 #import matplotlib.pyplot as plt
 import matplotlib as mpl
 from matplotlib.style.core import read_style_directory, update_nested_dict, \
-    available, library, _StyleLibrary
+    available, library
 
 # check if this finds the resources when installing the module using pip.
 scistyles_dir = [pth.abspath(pth.join(pth.dirname(__file__), "stylelib"))]
@@ -18,7 +18,7 @@ def list_styles(style_dirs: list=None) -> dict:
 
 
 def update_library(
-    style_dirs: list=None, library: _StyleLibrary=None, available: list=None,
+    style_dirs: list=None, library=None, available: list=None,
     ):
     """Load styles available in directory.
     
