@@ -76,10 +76,11 @@ contour.negative_linestyle : solid
 
 ### FIGURE
 # See http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure
-figure.figsize   : 4.8, 3.6    # figure size in inches
+figure.figsize   : 6, 4    # figure size in inches
+figure.constrained_layout.use: True
 
 savefig.transparent :  True     # transparent figures
-savefig.dpi         : 300     # figure dots per inch
+savefig.dpi         : 600     # figure dots per inch
 #savefig.bbox        : tight     # 'tight' or 'standard'.
 #savefig.pad_inches  : 0.05       # Padding to be used when bbox is set to 'tight'
 

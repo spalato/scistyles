@@ -1,5 +1,5 @@
+# core elements related to stylesheet handling
 import os.path as pth
-#import matplotlib.pyplot as plt
 import matplotlib as mpl
 from matplotlib.style.core import read_style_directory, update_nested_dict, \
     available, library
