@@ -9,39 +9,41 @@ pip install scistyles
 
 # Usage
 The first purpose of this module is to supply matplotlib stylesheets to assist
-in the creation of scientific figures. Custom stylesheets can be stored in
-relative paths or in `mpl_configdir`, but both solutions require manual copy
-and emailing for reusing and sharing. Storing the stylesheets in a centralized 
-repository facilitates reuse and sharing.
+in the creation of scientific figures. Since `matplotlib 3.7.0`, this has
+become quite easy. This module is still useful to collect stylesheets.
 
-The stylesheets stored under `src/scistyles/stylelib` are loaded automatically
-when importing `scistyles`.
-
-Therefore, just `use` them:
+The stylesheets stored under `src/scistyles` are discovered by `matplotlib`.
+Simply `use` them:
 ```python
 import matplotlib.pyplot as plt
 import scistyles
 
-plt.style.use("presentation-sp")
+plt.style.use("scistyles.presentation-sp")
 # plot away!
 ```
 
-Under the hood, this module simply extends `matplotlib.style` to accept
-a directory as an argument. If you have your own personal styles you don't want
-to share[^1], you can still load the styles directly:
+The module also provides a simple tool to format numbers with errors, such that
+the number in parentheses indicates the error on the last digits, ready to
+add to a plot.
 ```python
-import matplotlib.pyplot as plt
-from scistyles
-scistyles.update_library(style_dirs=["~/path/to/secret/stylesheets"])
-
-plt.style.use("trademarked-style")
-# ...
+from scistyles.format import format_value_error
+l = format_value_error(3.14159265, 0.1234) # "3.14(12)"
+# the number of decimals can be controlled:
+l = format_value_error(3.14159265, 0.1234, nd=1) # "3.1(1)"
+```
+If you use `lmfit`, you can use them directly on the `Parameter` in the fit
+results.
+```python
+from scistyles.format import format_parameter
+# get some data, setup some fit model.
+result = model.fit(...)
+label = format_parameter(result.params["important_variable"])
 ```
 
 # Contributing
 Contributions are welcome! In case you have strong disagreement with our choice
 of tick width or legend `handlelength`, then fine, just contribute your own
-stylesheet. We won't argue[^2], and just add it to the pile. Simply make sure
+stylesheet. We won't argue[^1], and just add it to the pile. Simply make sure
 to give the stylesheet a name that is not already taken.
 
 To contribute a stylesheet, just write an issue. For large contributions, a PR
@@ -60,5 +62,4 @@ sublabel formats.
 
 # Notes
 
-[^1]: Boo!
-[^2]: We aren't talking about colormaps.
+[^1]: We aren't talking about colormaps.

@@ -18,7 +18,7 @@ dependencies = ["matplotlib>=3.7"]
 dynamic = ["version", "description"]
 
 [project.optional-dependencies]
-dev = ["pytest", "numpy", "flit"]
+dev = ["pytest", "numpy", "flit", "lmfit"]
 
 [project.urls]
 Source = "https://github.com/spalato/scistyles"
