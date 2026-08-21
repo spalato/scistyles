@@ -6,12 +6,12 @@
 ####################################################################################
 
 ### FONT
-font.size           : 8
-font.family         : Arial
+font.size           : 9
+font.family         : Times New Roman
 # font.sans-serif     : Helvetica Neue
-font.weight         : medium
+font.weight         : ultralight
 text.hinting        : auto
-text.hinting_factor : 8
+#text.hinting_factor : 8
 
 ### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
 text.usetex         :  False # use latex for all text handling. The following fonts
@@ -25,16 +25,16 @@ text.usetex         :  False # use latex for all text handling. The following fo
                               # matplotlib mailing list
 
 ### AXES
-axes.labelsize      : 8      # fontsize of the x any y labels
-axes.linewidth      : 1.5    # edge linewidth
+axes.labelsize      : 9      # fontsize of the x any y labels
+axes.linewidth      : 1    # edge linewidth
 axes.labelpad       : 8.0
-axes.labelweight    : medium
+axes.labelweight    : ultralight
 #axes.xmargin        : 0       # x margin.  See `axes.Axes.margins`
 #axes.ymargin        : 0 
 
 ### LINES
 lines.linewidth     : 1.5
-lines.markersize  : 4            # markersize, in points
+lines.markersize  : 3           # markersize, in points
 lines.dash_joinstyle : round        # miter|round|bevel
 lines.dash_capstyle : round          # butt|round|projecting
 lines.solid_joinstyle : round       # miter|round|bevel
@@ -44,26 +44,26 @@ lines.solid_capstyle : round        # butt|round|projecting
 # see http://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick
 xtick.top            : True   # draw ticks on the top side
 xtick.bottom         : True   # draw ticks on the bottom side
-xtick.major.size     : 3      # major tick size in points
+xtick.major.size     : 5      # major tick size in points
 xtick.major.width    : 1    # major tick width in points
-xtick.minor.size     : 0      # minor tick size in points
+xtick.minor.size     : 3      # minor tick size in points
 xtick.major.pad      : 5      # distance to major tick label in points
 xtick.minor.pad      : 3      # distance to the minor tick label in points
-xtick.labelsize      : 8      # fontsize of the tick labels
+xtick.labelsize      : 9      # fontsize of the tick labels
 xtick.direction	     : in
 
 ytick.left            : True   # draw ticks on the top side
 ytick.right         : True   # draw ticks on the bottom side
-ytick.major.size     : 0   # major tick size in points
-ytick.major.width    : 0.35    # major tick width in points
-ytick.minor.size     : 0      # minor tick size in points
+ytick.major.size     : 5   # major tick size in points
+ytick.major.width    : 1   # major tick width in points
+ytick.minor.size     : 3      # minor tick size in points
 ytick.major.pad      : 5      # distance to major tick label in points
 ytick.minor.pad      : 3      # distance to the minor tick label in points
-ytick.labelsize      : 8 # fontsize of the tick labels
+ytick.labelsize      : 9 # fontsize of the tick labels
 ytick.direction      : in
 
 ### Legend
-legend.fontsize      : 8
+legend.fontsize      : 9
 legend.frameon       : False   # whether or not to draw a frame around legend
 legend.handlelength  : 2.5      # the length of legend lines
 

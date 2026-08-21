@@ -15,7 +15,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Visualization",
     "License :: OSI Approved :: MIT License"
 ]
-dependencies = ["matplotlib"]
+dependencies = ["matplotlib>=3.7"]
 dynamic = ["version", "description"]
 
 [project.optional-dependencies]

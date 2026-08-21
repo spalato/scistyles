@@ -11,7 +11,7 @@ font.family         : Arial
 # font.sans-serif     : Helvetica Neue
 font.weight         : medium
 text.hinting        : auto
-text.hinting_factor : 10
+#text.hinting_factor : 10
 
 ### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
 text.usetex         :  False # use latex for all text handling. The following fonts

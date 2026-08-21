@@ -2,32 +2,40 @@ import pytest
 import os.path as pth
 from glob import glob
 from itertools import chain
-from scistyles import scistyles_dir, list_styles#, update_library
-from matplotlib.style.core import library, available
+import scistyles
 from matplotlib.style import use
+
+scistyles_dirs = scistyles.__path__
+
+
+@pytest.fixture(
+    params=[
+        pth.splitext(pth.basename(filename))[0]
+        for directory in scistyles_dirs
+        for filename in glob(pth.join(directory, "*.mplstyle"))
+    ]
+)
+def stylename(request):
+    return request.param
+
 
 def test_files():
     # check that there is at least one style file
-    files = list(*chain([glob(d+"/*.mplstyle") for d in scistyles_dir]))
+    files = list(
+        chain.from_iterable(
+            glob(pth.join(directory, "*.mplstyle"))
+            for directory in scistyles_dirs
+        )
+    )
     assert len(files) > 0
 
-def test_list_styles():
-    files = list(*chain([glob(d+"/*.mplstyle") for d in scistyles_dir]))
-    listed = list_styles()
-    assert len(files) == len(listed) # for now...
 
-def test_autoupdate():
-    # check all our styles got added to the list
-    for stylename in list_styles():
-        assert stylename in library
+# def test_available():
+#     # check this was synced into `available`
+#     for stylename in list_styles():
+#         assert stylename in available
 
-def test_available():
-    # check this was synced into `available`
-    for stylename in list_styles():
-        assert stylename in available
-
-def test_use():
+def test_use(stylename):
     # check we can use the style
-    for stylename in list_styles():
-        use(stylename)
+    use(f"scistyles.{stylename}")
     assert True
