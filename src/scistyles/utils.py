@@ -17,3 +17,15 @@ def format_parameter(param):
     scale = 10**-decimal_place
     fmt = f"{{:.0{abs(decimal_place)}f}}({{:.0f}})"
     return fmt.format(param.value, param.stderr*scale)
+
+def format_value_error(value, err, nd=2):
+    """Format value and error to "value(err)", with `nd` decimal places."""
+    if nd < 1:
+        raise ValueError("Minimum 1 decimal place.")
+    try:
+        decimal_place = floor(log10(err))-nd+1
+    except ValueError: # error is 0 for frozen parameters
+        decimal_place = floor(log10(abs(value))+4)
+    scale = 10**-decimal_place
+    fmt = f"{{:.0{abs(decimal_place)}f}}({{:.0f}})"
+    return fmt.format(value, err*scale)
