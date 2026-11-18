@@ -1,3 +1,3 @@
 "scistyles: Matplotlib stylesheets for scientific publications."
-__version__ = '1.2'
+__version__ = '1.2.1'
 
