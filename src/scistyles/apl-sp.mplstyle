@@ -1,14 +1,13 @@
 ####################################################################################
 # 
-# Optics Letter stylesheet, by SP.
+# APL Letter stylesheet, by SP.
 # 
-# Last Updated: 
+# Last Updated: 2026-11-18
 ####################################################################################
 
 ### FONT
-font.size           : 10
-font.family         : sans-serif
-font.sans-serif     : Calibri,  DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+font.size           : 9
+font.family         : Calibri
 #font.serif          : Cambria, DejaVu Serif, Bitstream Vera Serif, Computer Modern Roman, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
 #font.weight         : ultralight
 #text.hinting        : auto
@@ -88,7 +87,7 @@ legend.title_fontsize: 9
 figure.figsize   : 3.25, 2.5    # figure size in inches
 figure.constrained_layout.use: True
 
-savefig.transparent :  True     # transparent figures
+savefig.transparent :  False    # transparent figures
 savefig.dpi         : 300     # figure dots per inch
 savefig.bbox        : tight     # 'tight' or 'standard'.
 savefig.pad_inches  : 0.05       # Padding to be used when bbox is set to 'tight'
