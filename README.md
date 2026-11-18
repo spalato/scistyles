@@ -16,7 +16,6 @@ The stylesheets stored under `src/scistyles` are discovered by `matplotlib`.
 Simply `use` them:
 ```python
 import matplotlib.pyplot as plt
-import scistyles
 
 plt.style.use("scistyles.presentation-sp")
 # plot away!
@@ -39,6 +38,17 @@ from scistyles.format import format_parameter
 result = model.fit(...)
 label = format_parameter(result.params["important_variable"])
 ```
+
+Recommended figure widths are available per journal, keyed by the number of
+columns spanned (`"page"` is the widest). The widths are in inches:
+```python
+from scistyles.journals import width
+fig = plt.figure(figsize=(width("aps"), 3.5))  # one column
+fig = plt.figure(figsize=(width("aps", 2), 3.5))  # two columns
+fig = plt.figure(figsize=(width("aps", "page"), 3.5))  # full page width
+```
+Rules differ between journals, even from the same publisher, so each journal
+has its own entry. Check the journal's author guidelines.
 
 # Contributing
 Contributions are welcome! In case you have strong disagreement with our choice
